@@ -1,22 +1,22 @@
-import React, { Component } from "react";
-import Timer from "./Timer";
+import React, {Component} from 'react';
+import Timer from './Timer';
 
 class PomodoroTimer extends Component {
   constructor(props) {
     super(props);
     this.REST_PERIOD = 5;
-    this.FOCUS_PERIOD = 0.5;
+    this.FOCUS_PERIOD = 0.1;
     this.state = {
-      intervalType: "focus",
-      period: this.FOCUS_PERIOD
+      intervalType: 'focus',
+      period: this.FOCUS_PERIOD,
     };
   }
 
   handleTimerCompleted = () => {
-    if (this.state.intervalType == "focus") {
-      this.setState({ intervalType: "rest", period: this.REST_PERIOD });
+    if (this.state.intervalType == 'focus') {
+      this.setState({intervalType: 'rest', period: this.REST_PERIOD});
     } else {
-      this.setState({ intervalType: "focus", period: this.FOCUS_PERIOD });
+      this.setState({intervalType: 'focus', period: this.FOCUS_PERIOD});
     }
   };
   render() {

@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { View, Platform, Text, StyleSheet } from "react-native";
+import {Text, StyleSheet } from "react-native";
 
 class TimerHeader extends Component {
   handleText = () => {
@@ -11,9 +11,9 @@ class TimerHeader extends Component {
       }
     } else {
       if (this.props.running === true) {
-        return "Just Relax :)";
+        return "Resting";
       } else if (this.props.running === false) {
-        return "Relax Now";
+        return "Time to rest!";
       }
     }
   };
