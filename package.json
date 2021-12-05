@@ -12,10 +12,10 @@
   "dependencies": {
     "react": "17.0.2",
     "react-native": "0.66.3",
-    "react-native-app-intro-slider": "^4.0.4",
     "react-native-countdown-circle-timer": "^2.5.4",
     "react-native-gorgeous-header": "^0.1.0",
     "react-native-maps": "^0.29.4",
+    "react-native-sound": "^0.11.1",
     "react-native-svg": "^12.1.1",
     "react-native-vector-icons": "^9.0.0",
     "react-navigation": "^4.0.10"
