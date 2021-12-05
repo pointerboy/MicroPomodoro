@@ -1,5 +1,5 @@
 <p align="center">
-  <img width="256" height="256" src="https://i.ibb.co/p2xbRFk/P-1.png">
+  <img width="256" height="256" src="https://i.ibb.co/fQycnGN/logonew.png">
 </p>
 
 # MicroPomodoro
