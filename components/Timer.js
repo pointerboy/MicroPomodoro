@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
-import {View, Text, StyleSheet, Vibration} from 'react-native';
+import {View, StyleSheet, Vibration} from 'react-native';
+import Sound from 'react-native-sound';
 import TimerHeader from './TimerHeader';
 import TimerDisplay from './TimerDisplay';
 import TimerButtons from './TimerButtons';
@@ -12,6 +13,8 @@ class Timer extends Component {
       time: this.props.period * 60,
     };
   }
+
+  notificationEffect = new Sound('notification.mp3', Sound.MAIN_BUNDLE);
 
   UNSAFE_componentWillReceiveProps(nextProps) {
     this.setState({running: false, time: nextProps.period * 60});
@@ -39,19 +42,23 @@ class Timer extends Component {
     if (this.state.running === true && this.state.time == 0) {
       clearInterval(this.timer);
       Vibration.vibrate([1000, 2500, 1000, 2500]);
+      this.notificationEffect.play();
       this.props.Oncomplete();
     }
   }
+
   handlePlaying = () => {
     this.setState({running: true});
     this.timer = setInterval(() => {
       this.setState({time: this.state.time - 1});
     }, 1000);
   };
+
   handlePause = () => {
     clearInterval(this.timer);
     this.setState({running: false});
   };
+
   handleReset = () => {
     clearInterval(this.timer);
     this.setState({running: false, time: this.props.period * 60});
