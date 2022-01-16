@@ -5,7 +5,7 @@
 # MicroPomodoro
 MicroPomodoro is a small & minimalistic pomodoro technique timer for Android or iOS, powered by React Native. 
 
-<img src="screenshots/preview.jpg">
+<img width="256" height="500" src="preview.jpg">
 
 # Getting started
 - Fetch the repository and run the npm install.
